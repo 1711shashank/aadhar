@@ -38,8 +38,6 @@
   .login__buttons{
 
     display: flex;
-     
-    
    
   }
   .login__form > Button{
@@ -53,6 +51,10 @@
     background-color: #0467FB  !important;
     color: white !important;
   }
+  .login__buttons > Button > :disabled{
+    background-color: grey  !important;
+  }
+
   
   .login__form > h5 {
     margin-bottom: 5px;
