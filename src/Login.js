@@ -1,6 +1,5 @@
 import React from "react";
 import "./Login.css";
-import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
 
@@ -53,36 +52,36 @@ function Login() {
         <h1>Sign-in</h1>
         <div className="login__form">
           <div className="login__form__ID">
-            <input
+            <input className="input" 
               type="number"
               id="aadharNumber"
               placeholder="Enter aadhar number"
               value={aadharNumber}
               onChange={(e) => setAadharNumber(e.target.value)}
             />
-            <Button type="submit" onClick={submit}>
-              Log in with OTP
-            </Button>
+            <button className="button1" type="submit" onClick={submit}>
+              Generate OTP
+            </button>
           </div>
           <div className="login__form__OTP">
-            <input
+            <input className="input" style={{marginTop:"12px", marginLeft:"2px"}}
               type="number"
               placeholder="Enter OTP"
               id="OTP"
               value={OTP}
               onChange={(e) => setOTP(e.target.value)}
             />
-            <button type="submit" onClick={verifyOTP}>
+            <button className="button1" type="submit" onClick={verifyOTP}>
               verify OTP
             </button>
           </div>
 
           <div className="login__buttons">
             <Link to="/Landlord">
-              <button type="submit" disabled={disable} onClick={verifyOTP}>Log in Landlord</button>
+              <button className="button" style={{marginTop:"50px"}} type="submit" disabled={disable} onClick={verifyOTP}>Log in Landlord</button>
             </Link>
             <Link to="/Renter">
-              <button type="submit" disabled={disable} onClick={verifyOTP}>Log in Renter</button>
+              <button className="button"  style={{marginTop:"50px"}} type="submit" disabled={disable} onClick={verifyOTP}>Log in Renter</button>
             </Link>
 
             
