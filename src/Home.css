@@ -8,14 +8,14 @@
     display: flex;
     align-items: center;
     padding: 10px 100px 10px 100px;
-    background-color: lightcyan;
+    background:rgb(182, 244, 248);
     justify-content: space-between;
 }
 
 .header__logIn__Button {
-
+ 
     width: 100px;
-    background-color: #0467FB  !important;
+    background-color: #030b18  !important;
     color: white !important;
     
   }
