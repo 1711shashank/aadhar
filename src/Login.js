@@ -77,14 +77,9 @@ function Login() {
           </div>
 
           <div className="login__buttons">
-            <Link to="/Landlord">
+            <Link to="/User">
               <button className="button" style={{marginTop:"50px"}} type="submit" disabled={disable} onClick={verifyOTP}>Log in Landlord</button>
-            </Link>
-            <Link to="/Renter">
-              <button className="button"  style={{marginTop:"50px"}} type="submit" disabled={disable} onClick={verifyOTP}>Log in Renter</button>
-            </Link>
-
-            
+            </Link>   
           </div>
         </div>
       </div>

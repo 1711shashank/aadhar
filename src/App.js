@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from './Home';
 import Login from './Login';
-import Landlord from './Landlord';
-import Renter from './Renter';
+import User from './User';
 
 
 function App() {
@@ -17,11 +16,8 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/Landlord">
-            <Landlord/>
-          </Route>
-          <Route path="/Renter">
-            <Renter/>
+          <Route path="/User">
+            <User/>
           </Route>
           <Route path="/">
             <Home />

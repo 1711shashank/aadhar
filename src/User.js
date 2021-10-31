@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Renter() {
+function User() {
     return (
         <div>
-            <p>Renter Page</p>
+            <p>User Page</p>
             
         </div>
     )
 }
 
-export default Renter;
+export default User;
