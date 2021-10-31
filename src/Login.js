@@ -3,10 +3,11 @@ import "./Login.css";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
+
 function Login() {
-  var 
   const [aadharNumber, setAadharNumber] = React.useState("");
   const [OTP, setOTP] = React.useState("");
+  const [disable, setDisable] = React.useState(true);
 
   const submit = () => {
     fetch("https://stage1.uidai.gov.in/onlineekyc/getOtp/", {
@@ -32,14 +33,18 @@ function Login() {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-    }).then(response=>response.json())
-    .then(data=>{ console.log(data); 
-      if(data.status == "y" && data.errCode == null){
-        
-      } else {
-        data.errCode
-      }
-    })
+    }).then(response => response.json())
+      .then(data => {
+        console.log(data);
+        if (data.status === "y" && data.errCode === null) {
+          console.log("RUNNING")
+          setDisable(false)
+
+        } else {
+          console.log("RUNNING2")
+          // data.errCode
+        }
+      })
   };
 
   return (
@@ -67,18 +72,20 @@ function Login() {
               value={OTP}
               onChange={(e) => setOTP(e.target.value)}
             />
-            <Button type="submit" onClick={verifyOTP}>
+            <button type="submit" onClick={verifyOTP}>
               verify OTP
-            </Button>
+            </button>
           </div>
 
           <div className="login__buttons">
             <Link to="/Landlord">
-              <Button type="submit">Log in Landlord</Button>
+              <button type="submit" disabled={disable} onClick={verifyOTP}>Log in Landlord</button>
             </Link>
             <Link to="/Renter">
-              <Button type="submit">Log in Renter</Button>
+              <button type="submit" disabled={disable} onClick={verifyOTP}>Log in Renter</button>
             </Link>
+
+            
           </div>
         </div>
       </div>
