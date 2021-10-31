@@ -36,11 +36,11 @@ function Login() {
       .then(data => {
         console.log(data);
         if (data.status === "y" && data.errCode === null) {
-          console.log("RUNNING")
+          console.log("correct otp")
           setDisable(false)
 
         } else {
-          console.log("RUNNING2")
+          console.log("incorrect otp")
           // data.errCode
         }
       })
